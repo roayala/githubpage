@@ -2,60 +2,84 @@
 <html lang="en">
 
 <head>
-    <title>roas008</title>
+    <title>Weather Py Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Bootstrap links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
 
 </head>
 
-<body>
+<body class="body bg-light">
 
-    <body class="d-flex flex-column h-100" data-gr-c-s-loaded="true">
-        <header>
-            <!-- Fixed navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="#">Raul Ayala</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand title1 " href="index.html">Weather Py Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Plots
+                            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="plot_temp.html">Temperature (F) vs. Latitude</a>
+                        <a class="dropdown-item" href="plot_humidity.html">Humidity (%) vs. Latitude</a>
+                        <a class="dropdown-item" href="plot_cloud.html">Cloudiness (%) vs. Latitude</a>
+                        <a class="dropdown-item" href="plot_wind.html">Wind Speed (mph) vs. Latitude</a>
+                    </div>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="data.html">Data</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main role="main" class="">
+        <br>
+        <h1>Weather vs Latitude</h1><br>
+
+        <div class="container fluid m-auto">
+            <div class="row justify-content-start m-auto">
+                <div class="col-md-7 border rounded-lg bg-white p-4">
+                    <h2>Resume</h2>
+                    <p class="intro alaign-justify">
+
+                        The purpose of this project was to analyze how weather changes as you get closer to the equator. To accompish this analysis, we pulled data from the OpenWeatherMap API to assamble a dataset on over 500 cities.
+                        <br> <br> After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, windspeed and humidity. This site provides the source data and
+                        visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                    </p>
+                    <img src="statics/weather parameters.png" class="img-fluid" alt="">
                 </div>
-            </nav>
-        </header>
 
-        <!-- Begin page content -->
-        <main role="main" class="flex-shrink-0">
-            <div class="container">
-                <h1 class="mt-5"> Simple bio page</h1>
-                <br>
-                <img src="https://images.unsplash.com/photo-1524213216828-963a6a3cf9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2611&q=80" alt="Cat" width=20%>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet quas ipsa dicta porro, voluptates unde fugit autem ut asperiores! Voluptatibus, consectetur! Eum ex harum enim aliquam labore repellat exercitationem! Excepturi. <code>padding-top: 60px;</code>                    on the <code>main &gt; .container</code>.</p>
-                <p>Back to <a href="/docs/4.3/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+                <div class=" col-md-4  border rounded-lg bg-white offset-md-1">
+                    <h2>Visualizations</h2>
+
+                    <a href="plot_temp.html"><img src="statics/Unknown.png" class="img-fluid" alt="Temperature vs Latitude">Temperature vs Latitude</a>
+                    <a href="plot_humidity.html"><img src="statics/Unknown2.png" class="img-fluid" alt="Temperature vs Latitude">Humidity (%) vs. Latitude</a>
+                    <a href="plot_cloud.html"><img src="statics/Unknown3.png" class="img-fluid" alt="Temperature vs Latitude">Cloudiness (%) vs. Latitude</a>
+                    <a href="plot_wind.html"><img src="statics/wind.png" class="img-fluid" alt="Temperature vs Latitude">Wind Speed (mph) vs. Latitude</a>
+
+                </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <span class="text-muted">Place sticky footer content here.</span>
-            </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script>
-            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-        </script>
-        <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-
-    </body>
 </body>
 
 </html>
