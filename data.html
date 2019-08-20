@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="body bg-light">
+<body data-gr-c-s-loaded="true">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Plots
                             </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,11 +39,11 @@
                         <a class="dropdown-item" href="plot_cloud.html">Cloudiness (%) vs. Latitude</a>
                         <a class="dropdown-item" href="plot_wind.html">Wind Speed (mph) vs. Latitude</a>
                     </div>
-                    <li class="nav-item ">
-                        <a class="nav-link text-white" href="comparison.html">Comparison</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="data.html">Data</a>
+                        <a class="nav-link" href="data.html">Data</a>
                     </li>
             </ul>
         </div>
@@ -51,44 +51,24 @@
 
 
     <main role="main" class="">
-        <br>
+        <div>
 
-        <div class="container fluid m-auto">
-            <div class="row justify-content-start m-auto">
-                <div class="col-md-7 border rounded-lg bg-white p-4">
-                    <div class="jumbotron p-1">
-                        <h1> Weather vs Latitude</h1>
-                    </div>
-                    <p class="intro alaign-justify">
-
-                        The purpose of this project was to analyze how weather changes as you get closer to the equator. To accompish this analysis, we pulled data from the OpenWeatherMap API to assamble a dataset on over 500 cities.
-                        <br> <br> After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, windspeed and humidity. This site provides the source data and
-                        visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
-                    </p>
-                    <img src="statics/weather parameters.png" class="img-fluid" alt="">
-                </div>
-
-                <div class=" col-md-4  border rounded-lg bg-white offset-md-1"><br>
-                    <div class="jumbotron p-1">
-                        <h2> Visualizations</h2>
-                    </div>
-
-
-                    <a href="plot_temp.html"><img src="statics/Unknown.png" class="img-fluid" alt="Temperature vs Latitude">Temperature vs Latitude</a>
-                    <a href="plot_humidity.html"><img src="statics/Unknown2.png" class="img-fluid" alt="Temperature vs Latitude">Humidity (%) vs. Latitude</a>
-                    <a href="plot_cloud.html"><img src="statics/Unknown3.png" class="img-fluid" alt="Temperature vs Latitude">Cloudiness (%) vs. Latitude</a>
-                    <a href="plot_wind.html"><img src="statics/wind.png" class="img-fluid" alt="Temperature vs Latitude">Wind Speed (mph) vs. Latitude</a>
-
-                </div>
-            </div>
         </div>
+
+        <br><br>
+        <h1>Data</h1>
+
+
     </main>
 
+    </div>
 
-    <footer class="card-footer">
-        <p>&copy; ROAS Copyright Coding Bootcamp 2019 </p>
-    </footer>
 
+    </div>
+
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
